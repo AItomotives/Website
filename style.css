@@ -26,6 +26,15 @@
   color: white;
 }
 
+a:link {
+	color: green;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 body {
 background-color: #DBF9FC;
 text-align: left;
