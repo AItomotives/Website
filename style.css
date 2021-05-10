@@ -26,11 +26,13 @@
   color: white;
 }
 
+/* Change color of links*/
 a:link {
 	color: green;
 	text-decoration: none;
 }
 
+/* Underline a link to show hover*/
 a:hover {
 	text-decoration: underline;
 }
