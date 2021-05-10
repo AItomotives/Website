@@ -1,25 +1,27 @@
+<!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="style.css">
     <title>AItomotives - Vehicle AI</title>
-<div id = "home">
+<div id = "metrics">
 </head><div class="topnav">
 <a  href="index.html">Home</a>
 <a href="members.html">Members</a>
 <a class="active" href="metrics.html">Metrics</a>
 <a href="artifacts.html">Artifacts</a>
 </div>
+<body>
 <h2>Metrics</h2>
-<ul>
-  <li>//todo</li>
-</ul>
+<p> Unfortunately, the team made the choice to not maintain any metrics. This was originally decided because the project was  primarily research focused, so it was considered that traditional product metrics would be ineffective. However, this ended up making tracking work difficult, if not impossible.
+</p>
 
 <h2>Development Methodology</h2>
 <p>Agile Kanban</p>
 <p>
-  We will be had asynchrounous daily standups, with a focus on the
-  work completed and current blockers. We Utilized a Kanban
-  board that the team will kep  groomed and prioritized. This is
-  also served as the main focus for issue tracking.
+  The team did, however, attempt to maintain a kanban board ala trello. This wasn't as adheared to as it could of been, but todos and the like were simulataneusly tracked on the teams discord, where the majority of project communication and maintenance happened. Tasks were decided on a weekly based based on sponsor expectations and newly gained domain knowledge, but for the majority of work, we did not have a clear picture of what we'd be doing much further than a week in advance. In some ways, this was our fault, but in others, it was a necessity of doing research work in a domain none of us were familiar with.
 </p>
-<h2>Domain model</h2>
-<p>//todo</p>
+<h2>Project architecture</h2>
+<p>This project ended up being designed around ROS, a system for extending the functionality of drones and general robotic systems. Luckily, MAVROS, a system for interfacing between ROS and mavlink, the communication protocol our drone used, had already been designed. This allowed us to build a system that would be able to implement a clear seperation of concerns, that would fit together in a modular way. Pieces of ROS were designed to be swapped in and out, taking up a traditional pubsub model for relaying information between ROS nodes, which made it very easy to design around. In the end, ROS was responsible for reading from EXACT, the machine learning system provided to us by our sponsor, using the information from it to make decisions, and then relaying those decisions to our drone.</p>
+<h2> Project Limitations </h2>
+<p>
+Ultimately, the project failed to meet substantial milstones. It was unable to actually make decisions based on flight conditions, or any meaningful decisions at all. This came down to two primary factors: Inconsistencies between how the simulation and reality work, and the fundamental problems in both acquiring and utilizing a dataset for training EXACT. While we may have faile din achieving our goals, we <i> have </i> made the tool to accomplish our goals. If future work were to continue, it would be easy for developers to switch to a different dataset, and implement a strategy for decision making that took into account the predicitions that the dataset allowed EXACT to make.
+</p></body>
